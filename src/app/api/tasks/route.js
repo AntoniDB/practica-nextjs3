@@ -2,8 +2,7 @@ import { NextResponse } from "next/server";
 import {prisma} from '../../../libs/prisma'
 
 export async function GET(){
-    const data = await prisma.task.findMany() //listar todos los elementos de la tabla tasks
-    console.log(data)
+    const data = await prisma.task.findMany() //listar todos los elementos de la tabla tasks    
     return NextResponse.json(data)
 }
 
